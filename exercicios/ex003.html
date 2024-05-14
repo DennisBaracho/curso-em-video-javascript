@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editando texto com JS</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual seu nome?')
+        document.write(`Olá, ${nome}. Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.<br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.<br>`)
+        var nota = parseFloat(window.prompt('Qual foi sua nota?'))
+        document.write(`Sua nota é ${nota.toFixed(2)}.<br>`)
+        var salario = parseFloat(window.prompt('Quanto é seu salário?'))
+        document.write(`Seu salário é ${salario.toLocaleString('pt-Br', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>

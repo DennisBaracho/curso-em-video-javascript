@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis</title>
+    <style>
+        body {
+            background-color: rgb(81, 81, 122);
+            color: white;
+            font-family: sans-serif;
+        }
+
+        div {
+            margin: auto;
+            text-align: center;
+        }
+
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Variáveis em JavaScript</h1>
+        <p>Executando somas</p>
+        <script>
+            var n1 = parseInt(window.prompt("Digite um número inteiro: ")) // String
+            var n2 = parseFloat(window.prompt("Digite outro número real: ")) // String
+            var n3 = Number(window.prompt("Digite QUALQUER número: ")) // String
+            window.confirm("Posso somar?");
+            soma = n1 + n2 + n3
+            window.alert(`A soma dos valores é ${soma}`)
+        </script>
+    </div>
+</body>
+
+</html>
