@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(133, 109, 164);
+            color: white;
+            font: normal 16px Arial;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulos">
+    <h1 name="titulo">Iniciando estudos com DOM</h1>
+    <h2 class="subtitulo">Primeiros passos no document</h2>
+</div>
+    <div id="paragrafos">
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    </div>
+    <div id="msg">Clique em mim</div>
+    <script>
+        // Selecionando por Tag
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] // Vai selecionar o primeiro parágrafo
+        
+        corpo.style.background = 'black'
+        p1.style.color = 'purple'
+
+        document.write('Sem formatação: ' + p1.innerText) // Pega apenas o texto, sem formatação
+        document.write('<br> Com formatação: ' + p1.innerHTML) // Pega o HTML inteiro com tags filhas, formatado
+
+        // Selecionando por Id
+        var d = document.getElementById('msg')
+        d.style.color = 'green'
+        d.innerText = 'Estou aguardando...'
+
+        // Selecionando por Nome
+        var e = window.document.getElementsByName('titulo')[0]
+        e.innerText = 'Olá!'
+
+        // Selecionando por Classe
+        var f = window.document.getElementsByClassName('subtitulo')[0]
+        f.innerText = 'Tudo bem?'
+
+        // Selecionando por Seletor
+        var g = window.document.querySelector('div#paragrafos')
+        var h = window.document.querySelector('div.titulos')
+    </script>
+</body>
+</html>
